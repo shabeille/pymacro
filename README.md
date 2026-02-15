@@ -32,3 +32,4 @@ Plans for the future
 -
 * Implement an ability to automatically record macros and have them written to a file
 * Mouse controls?
+* Actual proper command line interface using argparse
