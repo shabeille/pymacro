@@ -1,0 +1,4 @@
+space press 0
+
+alt+tab press 20
+ctrlleft+w press 20

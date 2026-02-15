@@ -1,6 +1,7 @@
 pymacro
 =
-This program reads files stored in the "macros" folder which follow a certain syntax. Three examples are included to present all features
+This program reads files stored in the "macros" folder which follow a certain syntax. Three examples are included to present all features  
+Currently doesn't work on Wayland
 
 The syntax for the file is as follows:
 * Each line is an instruction
@@ -11,9 +12,11 @@ The syntax for the file is as follows:
 * It can either be "up" "down" or "press"
 * "press" will press they key down, wait the duration, then immediately release it without having to specify keyUp
 * The duration is the amount in milliseconds that the program should wait until reading the next instruction
+* You can comment out lines by adding '#' to the beginning of it. Only at the beginning of lines. You cannot add a comment mid-line
 
 E.g.:  
 ```
+# Here is an example macro
 f1+w down 500
 f1 up 2000
 w up 0
@@ -32,4 +35,4 @@ Plans for the future
 -
 * Implement an ability to automatically record macros and have them written to a file
 * Mouse controls?
-* Actual proper command line interface using argparse
+* Make it work on Wayland

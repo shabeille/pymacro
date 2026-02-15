@@ -1,25 +1,16 @@
-import reader, writer
+import argparse
+import reader
 
 
 def main():
-    while True:
-        print('\nSelect action\n-------------')
-        print('1: Read macro file\n2: Write macro file\n3: Exit program')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('path', help='The path to the file that should be read')
+    parser.add_argument('-p', '--pause', type=float, default=0, help='Duration to pause before beginning file execution')
 
-        selection = input('Selection: ')
+    args = parser.parse_args()
 
-        if selection == '1':
-            reader.main()
-
-        elif selection == '2':
-            writer.main()
-
-        elif selection == '3':
-            exit()
-
-        else:
-            print('\nInvalid selection.\nEnter the number associated with the action.')
-
+    file_reader = reader.Reader(args.path)
+    file_reader.read_file_instructions(pause=args.pause)
 
 if __name__ == '__main__':
     main()

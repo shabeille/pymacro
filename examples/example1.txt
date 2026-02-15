@@ -1,0 +1,5 @@
+f1+w down 500
+f1 up 2000
+w up 0
+a press 50
+d press 100

@@ -1,0 +1,13 @@
+h press 20
+e press 20
+l press 20
+l press 20
+o press 20
+
+space press 200
+
+w press 20
+o press 2000
+r press 20
+l press 20
+d press 20
